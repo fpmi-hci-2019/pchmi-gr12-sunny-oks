@@ -3,4 +3,4 @@ jdk: oraclejdk8
 dist: trusty
 
 script:
-  - ./mvn clean install -B
+  - mvn clean install -B
