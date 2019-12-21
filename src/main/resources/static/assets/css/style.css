@@ -1,0 +1,289 @@
+.navbar .nav > li > a {
+    font-size: 2em;
+}
+
+.navbar .nav > li > a {
+    color: cornsilk;
+}
+
+.navbar .nav > li > a:hover {
+    color: gray;
+}
+
+
+h2{
+  color: gray;
+}
+
+body{
+    background-color: #ebebeb;
+    font-family: "Calibri Light";
+}
+
+
+.content{
+    background-color: #ebebeb;
+    float:top;
+    display: flex;
+    flex-direction: row;
+    min-height:calc(100vh - 50px);
+}
+
+.footer {
+    min-height: 70px;
+    background-color: #f7f6f6;
+}
+
+.profile {
+
+    background-color: #ebebeb;
+    float:left;
+    width: 350px;
+    min-height:calc(100vh - 50px);
+}
+
+.strip {
+
+    border-width: 0px 1px 0px 1px;
+    float:left;
+    width: 650px;
+    min-height:calc(100vh - 81px);
+    background-color: #efeeee;
+}
+
+.search {
+    float:left;
+    width: 270px;
+    min-height:calc(100vh - 50px);
+}
+.normalize{
+    padding: 0;
+    margin: 0;
+}
+.top-left-avatar{
+    margin-left:10px;
+    margin-top:3px;
+}
+.top-left-avatar img{
+    cursor: pointer;
+}
+.logo{
+    float: left;
+    margin-left: 25%;
+    margin-top:2px;
+}
+.logo{
+    cursor: pointer;
+}
+.add-photo{
+    float: left;
+    margin-left: 5%;
+}
+.add-photo{
+    cursor: pointer;
+}
+.border-type {
+    border-style: solid;
+    border-color: #d6d6d6;
+}
+
+.log-out{
+    float: left;
+    margin-left:48vw;
+    margin-top: 2px;
+}
+.log-out img{
+    cursor: pointer;
+}
+
+.avatar-place {
+    width: 250px;
+    height: 330px;
+    margin-left: 11%;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.avatar {
+    flex-direction: row;
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+.post {
+    width: 480px;
+    height: 480px;
+    background-color: #ffffff;
+    margin-top:55px;
+    margin-left: 85px;
+}
+
+.photo-place{
+    float:top;
+    margin-left: 20px;
+    margin-top:5px;
+    width: 440px;
+}
+
+.author-pic{
+    float: left;
+    margin-left: 30px;
+    margin-top: 13px;
+    height: 43px;
+    width: 40px;
+}
+.post-name{
+    float: bottom;
+    margin-left: 12px;
+    margin-top: 21px;
+    height: 15px;
+    font-size: 8px;
+}
+.post-time{
+    float: bottom;
+    margin-top: 10px;
+    height: 10px;
+    font-size: 6px;
+    margin-left: 12px;
+    color: gray;
+}
+.post img{
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top:3px;
+}
+.post-name i{
+    display: inline-block;
+    float: right;
+    font-size:20px;
+    margin-right:20px;
+    color: grey;
+}
+.post-time h1{
+    display: inline-block;
+
+}
+
+.post-description{
+    float: top;
+    margin-left: 20px;
+    width: 440px;
+    font-size: 8px;
+}
+.post-bottom{
+
+    float:bottom;
+    margin-bottom: 370px;
+    margin-left: 20px;
+}
+.post-hash{
+    float: left;
+    font-size: 8px;
+    width: 300px;
+    color: #595959;
+}
+.like-info{
+    float: left;
+    height: 40px;
+    margin-left:80px;
+}
+.like-amount{
+    float: left;
+    color: #3e403d;
+    font-size: 9px;
+}
+.like-icon{
+    cursor: pointer;
+    float:left;
+    margin-top:15px;
+    color: red;
+    height: 30px;
+    width: 30px;
+    border-width: 2px 2px 2px 2px;
+
+}
+.strip input{
+    font-family: "Comic Sans MS";
+    width: 150px;
+    height: 40px;
+    margin-left: 35%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.search-block{
+    float:left;
+    margin-top: 50px;
+    width: 250px;
+    height: 400px;
+    background-color: white;
+}
+.search-head{
+    float:left;
+    font-size: 14px;
+    width:100%;
+    font-family: Arial;
+    color: #3e403d;
+    height: 60px;
+    background-color: #f7f6f6;
+}
+.filter-pic{
+    float: left;
+    margin-left: 50%;
+    margin-top: 20px;
+}
+.search-head i{
+    color: grey;
+    font-size: 30px;
+}
+.search-head h1{
+    margin-left: 13%;
+}
+
+
+.search-body h3{
+    float: top;
+    margin-left: 13%;
+}
+.search-body input{
+    border-style: groove;
+    margin-left:13%;
+    background-color: #f6f6f6;
+    color: #a3a09b;
+}
+.search-body{
+    float:left;
+    margin-top: 8px;
+}
+.filter{
+    border-style: groove;
+    height: 30px;
+    width: 100px;
+    margin-top: 30px;
+    margin-left:13%;
+    font-size: 14px;
+}
+.input-date input{
+    display: inline-block;
+    width: 60px;
+}
+.input-date i{
+    font-size:24px;
+}
+.footer h1,h2,h3{
+    font-size: 15px;
+    margin-top: 20px;
+    color:gray;
+}
+.footer h1{
+    float:left;
+    margin-left: 15px;
+}
+.footer h2{
+    float:left;
+    margin-left: 30px;
+}
+.footer h3{
+    float:right;
+    margin-right: 30px;
+}
+
