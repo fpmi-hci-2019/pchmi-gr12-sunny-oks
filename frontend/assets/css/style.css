@@ -466,3 +466,58 @@ body{
     margin-left:15%;
     width:50%;
 }
+
+.menu-element-authorization{
+    float:left;
+    margin-left:40%;
+}
+
+.login-block{
+    float:left;
+    width:40%;
+    height: 250px;
+    background: #f8f8f8;
+    margin-left:29%;
+    margin-top:40px;
+}
+
+.label-with-input{
+    width:84%;
+    height:20px;
+    margin-top:30px;
+    margin-left:1px;
+}
+
+.input-password{
+    float:right;
+    width:130px;
+    height:20px;
+    margin-right: 100px;
+    margin-top:20px;
+
+
+}
+
+.input-login{
+    float:right;
+    width:130px;
+    height:20px;
+    margin-right: 100px;
+    margin-top:20px;
+}
+
+.label-with-input h1{
+    float:left;
+    font-size: 20px;
+    margin-top:15px;
+    margin-left:210px;
+
+}
+
+.input-login-button{
+    float:left;
+    width:130px;
+    height:20px;
+    margin-left: 310px;
+    margin-top:20px;
+}
