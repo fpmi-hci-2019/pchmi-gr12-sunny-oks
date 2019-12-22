@@ -449,3 +449,20 @@ body{
     font-size:20px;
     color:black;
 }
+
+.fav-out-icon h1{
+    font-size: 20px;
+    float:right;
+    margin-right:30px;
+}
+
+.basket-in-icon{
+    float:right;
+    margin-right:20px;
+}
+
+.fav-strip{
+    float:left;
+    margin-left:15%;
+    width:50%;
+}
