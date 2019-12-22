@@ -357,3 +357,54 @@ body{
     float:left;
     margin-left:550px;
 }
+
+.basket-strip{
+    float:left;
+    margin-left:30px;
+}
+
+.basket-post{
+    width: 700px;
+    height: 190px;
+    background-color: #f8f8f8   ;
+    margin-top:55px;
+}
+
+.basket-post-description{
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+
+    width: 600px;
+    font-size: 8px;
+}
+
+.basket-out-icon{
+    margin-right:80px;
+}
+
+.order-button{
+    margin-top:100px;
+    margin-left:50%;
+}
+
+.basket-result{
+    margin-top: 50px;
+    float:left;
+    margin-left: 5%;
+    width: 300px;
+    min-height:calc(100vh - 50px);
+}
+
+.basket-result h2{
+    font-size: 20px;
+}
+
+.basket-result-block{
+    float:left;
+    margin-top: 50px;
+    width: 350px;
+    height: 400px;
+    margin-left: 20%;
+    background-color: #f8f8f8;
+}
