@@ -408,3 +408,44 @@ body{
     margin-left: 20%;
     background-color: #f8f8f8;
 }
+
+.orders-strip{
+    float:left;
+    width: 850px;
+    min-height:calc(100vh - 81px);}
+
+.orders-post{
+    float:top;
+    height:100px;
+    width:810px;
+    background: #f8f8f8;
+    margin-top:50px;
+    margin-left:10%;
+}
+
+.order-num{
+    float:left;
+    margin-left:5%;
+    font-size:15px;
+
+}
+
+.order-date{
+    float:right;
+    margin-right: 5%;
+}
+
+.order-address{
+    float:left;
+    margin-left:5%;
+}
+
+.order-sum{
+    float:right;
+    margin-right:5%;
+}
+
+.orders-post h2{
+    font-size:20px;
+    color:black;
+}
