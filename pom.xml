@@ -61,7 +61,7 @@
                 <configuration>
                     <excludes>
                         <exclude>com/sivalabs/jblogger/entities/*</exclude>
-                        <exclude>com/sivalabs/jblogger/*Application</exclude>
+                        <exclude>com/sivalabs/jblogger/*application.Application</exclude>
                     </excludes>
                 </configuration>
                 <executions>

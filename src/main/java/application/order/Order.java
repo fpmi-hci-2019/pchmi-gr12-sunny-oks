@@ -1,5 +1,5 @@
-package order;
-import enums.Role;
+package application.order;
+import application.enums.Role;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package order;
+package application.order;
 
 import org.springframework.data.repository.CrudRepository;
 

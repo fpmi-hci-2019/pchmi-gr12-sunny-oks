@@ -3,6 +3,15 @@ function mustacheRender(template, data) {
     return Mustache.render(template, data);
 }
 
+function loadBooks() {
+    fetch('/book/all').then(function(response) {
+        return response.text();
+    })
+        .then(function (text) {
+            console.log(text);
+        });
+}
+/*
 function loadContactsSearch(searchParams) {
     if(!searchParams)
         searchParams = getSearchParameters();
@@ -17,17 +26,8 @@ function loadContactsSearch(searchParams) {
         });
 }
 
-function loadBooks() {
-    fetch('/ContactBook/contacts/length').then(function(response) {
-        return response.text();
-    })
-        .then(function (length) {
-            loadContactsPage(1, length);
-        });
-}
-
 function loadContactsSearchPage(page, length, searchParams) {
-    const data = fetch('/ContactBook/search?page=' + page, {
+    const data = fetch('/search?page=' + page, {
         method: 'POST',
         body: JSON.stringify(searchParams)
     }).then(function(response) {
@@ -137,4 +137,4 @@ function initContactPage() {
                 console.log('cannot delete contacts');
             });
     });
-}
+}*/

@@ -1,5 +1,5 @@
-package user;
-import enums.Role;
+package application.user;
+import application.enums.Role;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

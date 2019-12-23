@@ -1,4 +1,4 @@
-package user;
+package application.user;
 
 import org.springframework.data.repository.CrudRepository;
 
