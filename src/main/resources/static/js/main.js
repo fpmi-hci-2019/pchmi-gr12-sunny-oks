@@ -4,11 +4,20 @@ function mustacheRender(template, data) {
 }
 
 function loadBooks() {
-    fetch('/book/all').then(function(response) {
-        return response.text();
-    })
-        .then(function (text) {
-            console.log(text);
+    let template = fetch('./html/book.html').then(function(response) {
+        return response.text()
+    });
+    let books = fetch('/book/all').then(function(response) {
+        return response.json();
+    });
+    Promise.all([template, books])
+        .then(function(response) {
+            const resolvedData = response[1];
+            const resolvedTemplate = response[0];
+            let strip = document.querySelector('.strip');
+            resolvedData.forEach(book => {
+                strip.innerHTML += mustacheRender(resolvedTemplate, book);
+            })
         });
 }
 /*

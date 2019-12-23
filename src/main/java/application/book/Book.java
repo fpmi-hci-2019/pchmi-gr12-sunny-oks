@@ -2,10 +2,7 @@ package application.book;
 
 import application.enums.Genre;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Book {
@@ -20,6 +17,10 @@ public class Book {
     private Genre genre;
 
     private Double cost;
+
+    @Lob
+    @Column(name = "picture", columnDefinition="BLOB")
+    private byte[] picture;
 
     public Integer getId() {
         return id;
@@ -59,5 +60,13 @@ public class Book {
 
     public void setCost(Double cost) {
         this.cost = cost;
+    }
+
+    public byte[] getPicture() {
+        return picture;
+    }
+
+    public void setPicture(byte[] picture) {
+        this.picture = picture;
     }
 }
