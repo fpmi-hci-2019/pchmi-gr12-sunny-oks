@@ -569,3 +569,16 @@ body{
 .name-input{
     float:top;
 }
+
+.book-ava{
+    height:300px;
+    width:300px;
+    float: left;
+    margin-left:5%;
+    margin-top:25px;
+}
+
+.basket-book-page{
+    float: left;
+    margin-left: 70px;
+}
