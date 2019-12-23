@@ -472,8 +472,8 @@
    * the given `context` and `partials`.
    *
    * Note: The `originalTemplate` is only ever used to extract the portion
-   * of the original template that was contained in a higher-order section.
-   * If the template doesn't use higher-order sections, this argument may
+   * of the original template that was contained in a higher-application.order section.
+   * If the template doesn't use higher-application.order sections, this argument may
    * be omitted.
    */
   Writer.prototype.renderTokens = function renderTokens (tokens, context, partials, originalTemplate) {
@@ -505,7 +505,7 @@
     var value = context.lookup(token[1]);
 
     // This function is used to render an arbitrary template
-    // in the current context by higher-order sections.
+    // in the current context by higher-application.order sections.
     function subRender (template) {
       return self.render(template, context, partials);
     }
@@ -520,7 +520,7 @@
       buffer += this.renderTokens(token[4], context.push(value), partials, originalTemplate);
     } else if (isFunction(value)) {
       if (typeof originalTemplate !== 'string')
-        throw new Error('Cannot use higher-order sections without the original template');
+        throw new Error('Cannot use higher-application.order sections without the original template');
 
       // Extract the portion of the original template that the section contains.
       value = value.call(context.view, originalTemplate.slice(token[3], token[5]), subRender);
@@ -617,7 +617,7 @@
     }
   };
 
-  // Export the escaping function so that the user may override it.
+  // Export the escaping function so that the application.user may override it.
   // See https://github.com/janl/mustache.js/issues/244
   mustache.escape = escapeHtml;
 
