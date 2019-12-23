@@ -1,180 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>BookStore</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="./css/bootstrap.css">
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <!-- Mustache  -->
-    <script src="./js/mustache.js_2.3.0.js"></script>
+    <title>SunnyOz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
-<body>
-
-
-<!-- As a heading -->
-<nav class="W-100 navbar navbar-light blue lighten-4 ">
-    <span class="navbar-brand W-100" style="background-color: #0091AC; color: #ffffff" >Sun Books</span>
-    <br/>
-</nav>
-
-<nav class="W-100 navbar navbar-inverse" style="background-color: #03A4C2; color: #ffffff">
-        <div>
-            <ul id="menu" class="W-100 nav navbar-nav " align="center" >
-                <li class="tab" id="profile"><a>Профиль</a></li>
-                <li class="tab" id="catalog"><a>Каталог</a></li>
-                <li class="tab" id="basket"><a>Корзина</a></li>
-                <li class="tab" id="special"><a>Избранное</a></li>
-                <li class="tab" id="orders"><a>Мои заказы</a></li>
-            </ul>
+<body class="normalize">
+    <div class="header">
+        <div class="top-panel-logo">
+            <img src="assets/pics/sunny-oks-logo.png" width="265" height="83">
         </div>
+        <div class="top-panel-contacts"><h1>Контакты</h1></div>
+        <div class="top-panel-about"><h1>О нас</h1></div>
 
-</nav>
+    </div>
 
+    <div class="menu">
+        <div class="menu-element"><h1><a href="#">Профиль</a></h1></div>
+        <div class="menu-element"><h1><a href="#">Каталог</a></h1></div>
+        <div class="menu-element"><h1><a href="basket.html">Корзина</a></h1></div>
+        <div class="menu-element"><h1><a href="favourites.html">Избранное</a></h1></div>
+        <div class="menu-element"><h1><a href="orders.html">Мои заказы</a></h1></div>
+    </div>
 
-<div id="content" class="container container-fluid">
-    <body class="normalize">
     <div class="content">
-        <div class="container col-lg-3">
+        <div class="search">
             <div class="search-block border-type">
                 <div class="search-head">
                     <h1>Поиск <i class="fa fa-filter"></i></h1>
                 </div>
                 <div class="search-body">
-                    <h3>Поиск</h3>
-                    <input type="text" name="hash_tags" placeholder="Hash-tags...">
-                    <h3>Издательство</h3>
+                    <h3>Ключевые слова</h3>
+                    <input type="text" name="hash_tags" placeholder="фантастика, фэнтези">
+                    <h3>Цена</h3>
                     <div class="input-date">
-                        <input class = "input-date" type="text" name="Date1" placeholder="Since...">
-                        <input class = "input-date" type="text" name="Date2" placeholder="For...">
-                        <i class="fa fa-calendar"></i>
+                        <input class = "input-date" type="text" name="Date1" placeholder="мин">
+                        <input class = "input-date" type="text" name="Date2" placeholder="макс">
                     </div>
-                    <h3>Авторы</h3>
-                    <input type="text" name="Author..." placeholder="Username...">
-                    <input class = "filter" type="button" name ="filter_button" value="Show posts">
+                    <h3>Автор</h3>
+                    <input type="text" name="Author..." placeholder="Имя автора...">
+                    <input class = "filter" type="button" name ="filter_button" value="Найти">
                 </div>
             </div>
         </div>
         <div class="strip border-type">
             <div class="post">
-                <div class="author-pic"><img src="assets/pics/mach-learn.png" width="80"></div>
-                <img align="right" src="assets/pics/delete.png" width="35" height="35">
-                <img align="right" src="assets/pics/pencil.png" width="35" height="35">
-                <div class="post-name"><h1>Введение в машинное обучение</h1></div>
+                <div class="author-pic">
+                    <img align="left" src="assets/pics/star_unselected.png" width="40" height="40">
+                    <h3>12 BYN</h3>
+                </div>
+
+                <div class="author-pic"><img src="assets/pics/ds.jpg" width="80" height="100"></div>
+                <div class="basket-in-icon"><img align="right" src="assets/pics/korzina.png" width="35" height="35"></div>
+                <div class="post-name"><h1><br>Machine Learning<br><h2>Joel Grass</h2></h1></div>
                 <div class="post-description">
-                    <h1>Oh my god, what a lovely boy! <br> I hope i will return to Bali someday! Great experience, beautiful nature!</h1>
+                    <h1>Joel Grass. Good book studying ML using python.Joel Grass. Good book studying ML using python.
+                        Joel Grass. Good book studying ML using python.</h1>
                 </div>
             </div>
             <div class="post">
-                <div class="author-pic"><img src="assets/pics/avatar-top-left.svg" width="35" height="35"></div>
-                <img align="right" src="assets/pics/delete.png" width="35" height="35">
-                <img align="right" src="assets/pics/pencil.png" width="35" height="35">
-                <div ><h1>Alexander Kuzmik</h1></div>
-                <div ><h1>25.02.2018, 15:40</h1></div>
-                <div class="photo-place" align="center"><img src="assets/pics/parrots1.jpg" width="440"></div>
+                <div class="author-pic">
+                    <img align="left" src="assets/pics/star_unselected.png" width="40" height="40">
+                    <h3>12 BYN</h3>
+                </div>
+
+                <div class="author-pic"><img src="assets/pics/ds.jpg" width="80" height="100"></div>
+                <div class="basket-in-icon"><img align="right" src="assets/pics/korzina.png" width="35" height="35"></div>
+                <div class="post-name"><h1><br>Machine Learning<br><h2>Joel Grass</h2></h1></div>
                 <div class="post-description">
-                    <h1>Oh my god, what a lovely boy! <br> I hope i will return to Bali someday! Great experience, beautiful nature!</h1>
-                </div>
-                <div class="post-bottom">
-                    <div class="post-hash"><h1>#summer #love #Bali #friends #birds #holidays #cute #nature #parrots</h1></div>
-                    <div class="like-info">
-                        <div class="like-amount"><h1>14</h1></div>
-                        <div class="like-icon"><i class="fa fa-heart" height = "30" width="30"></i></div>
-                    </div>
+                    <h1>Joel Grass. Good book studying ML using python.Joel Grass. Good book studying ML using python.
+                        Joel Grass. Good book studying ML using python.</h1>
                 </div>
             </div>
-            <input  type="button"  value="Show more...">
+            <div class="post">
+                <div class="author-pic">
+                    <img align="left" src="assets/pics/star_unselected.png" width="40" height="40">
+                    <h3>12 BYN</h3>
+                </div>
 
+                <div class="author-pic"><img src="assets/pics/ds.jpg" width="80" height="100"></div>
+                <div class="basket-in-icon"><img align="right" src="assets/pics/korzina.png" width="35" height="35"></div>
+                <div class="post-name"><h1><br>Machine Learning<br><h2>Joel Grass</h2></h1></div>
+                <div class="post-description">
+                    <h1>Joel Grass. Good book studying ML using python.Joel Grass. Good book studying ML using python.
+                        Joel Grass. Good book studying ML using python.</h1>
+                </div>
+            </div>
+            <div class="post">
+                <div class="author-pic">
+                    <img align="left" src="assets/pics/star_unselected.png" width="40" height="40">
+                    <h3>12 BYN</h3>
+                </div>
+
+                <div class="author-pic"><img src="assets/pics/ds.jpg" width="80" height="100"></div>
+                <div class="basket-in-icon"><img align="right" src="assets/pics/korzina.png" width="35" height="35"></div>
+                <div class="post-name"><h1><br>Machine Learning<br><h2>Joel Grass</h2></h1></div>
+                <div class="post-description">
+                    <h1>Joel Grass. Good book studying ML using python.Joel Grass. Good book studying ML using python.
+                        Joel Grass. Good book studying ML using python.</h1>
+                </div>
+            </div>
         </div>
-
-        <div class="profile">
-            <div class="avatar-place">
-                <div class="avatar"><img src="assets/pics/avatar-top-left.svg" width="150" height="150"></div>
-                <h1 align="center">Alexander Kuzmik</h1>
-                <h2 align="center">Holidays!</h2>
-            </div>
-            <img  src="assets/pics/delete.png" width="35" height="35">
-            <img  src="assets/pics/pencil.png" width="35" height="35">
+        <div class="recommendations">
+        <h1 align="center">Рекомендуем</h1>
+            <div class="recommendation-pic"><img src="assets/pics/ds.jpg" width=150 height="200"></div>
+            <div class="recommendation-pic"><img src="assets/pics/ds.jpg" width="150" height="200"></div>
 
         </div>
 
     </div>
     <div class="footer">
         <div class="footer-left">
-            <h1>Kuzmik Alexander<br>2 grade, 13 group</h1>
-            <h2><br>foored1999@gmail.com</h2>
-            <h3><br>HawPic 26.02.2018</h3>
-        </div>
 
-    </div>
-    <!--<div id="search" class="col-lg-3">Панель поиска</div>
-    <div id="book-list" class="col-lg-6">
-        Книги
-        <div class="post">
-            <div class="userphoto">
-                <img src="img/valai.jpg" />
-                <span> Alexander Valai</span>
-            </div>
-            <span id="date">15:08 25.02.2018</span>
-            <img src="img/road.jpg" class="photopost">
-            <div class="description">
-                <div class="hashtags">
-                    #interesting
-                </div>
-                It's view
-            </div>
-            <div>
-                <img src="img/like.png" id="like"> Like it
-            </div>
-        </div>
-        <div class="post">
-            <div class="userphoto">
-                <img src="img/valai.jpg" />
-                <span> Alexander Valai</span>
-            </div>
-            <span id="date">15:08 25.02.2018</span>
-            <img src="img/road.jpg" class="photopost">
-            <div class="description">
-                <div class="hashtags">
-                    #funny
-                </div>
-                First look at my own photoportal
-            </div>
-            <div>
-                <img src="img/like.png" id="like"> Like it
-            </div>
-        </div>
-        <div class="post">
-            <div class="userphoto">
-                <img src="img/valai.jpg" />
-                <span> Alexander Valai</span>
-            </div>
-            <span id="date">15:08 25.02.2018</span>
-            <img src="img/road.jpg" class="photopost">
-            <div class="description">
-                <div class="hashtags">
-                    #hashtag #onemore
-                </div>
-                Some post description
-            </div>
-            <div>
-                <img src="img/like.png" id="like"> Like it
-            </div>
         </div>
     </div>
-    <div id="recommendation" class="col-lg-3">Рекомендовано вам</div>-->
-</div>
-<script src="https://cdn.polyfill.io/v2/polyfill.js?features=fetch"></script>
-<script src="../resources/js/contactForm.js"></script>
-<script src="../resources/js/contactPage.js"></script>
-<script src="../resources/js/email.js"></script>
-<script src="../resources/js/search.js"></script>
-<script src="../resources/js/validate.js"></script>
-<script src="../resources/js/main.js"></script>
 </body>
 </html>
