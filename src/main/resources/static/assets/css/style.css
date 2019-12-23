@@ -1,29 +1,24 @@
-.navbar .nav > li > a {
-    font-size: 2em;
-}
-
-.navbar .nav > li > a {
-    color: cornsilk;
-}
-
-.navbar .nav > li > a:hover {
-    color: gray;
-}
-
 
 h2{
   color: gray;
 }
 
 body{
-    background-color: #ebebeb;
     font-family: "Calibri Light";
 }
+.header{
+    float:top;
+    min-height: 100px;
+    background: #0091AC;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 
+}
 
 .content{
-    background-color: #ebebeb;
     float:top;
+
     display: flex;
     flex-direction: row;
     min-height:calc(100vh - 50px);
@@ -48,11 +43,12 @@ body{
     float:left;
     width: 650px;
     min-height:calc(100vh - 81px);
-    background-color: #efeeee;
 }
 
 .search {
+
     float:left;
+    margin-left: 100px;
     width: 270px;
     min-height:calc(100vh - 50px);
 }
@@ -83,8 +79,7 @@ body{
     cursor: pointer;
 }
 .border-type {
-    border-style: solid;
-    border-color: #d6d6d6;
+
 }
 
 .log-out{
@@ -109,11 +104,15 @@ body{
     margin-left: 50px;
     margin-top: 70px;
 }
+.basket-icon {
+    margin-top:10px;
+
+}
 
 .post {
-    width: 480px;
-    height: 480px;
-    background-color: #ffffff;
+    width: 580px;
+    height: 190px;
+    background-color: #f8f8f8   ;
     margin-top:55px;
     margin-left: 85px;
 }
@@ -127,11 +126,17 @@ body{
 
 .author-pic{
     float: left;
-    margin-left: 30px;
+    margin-left: 10px;
     margin-top: 13px;
-    height: 43px;
-    width: 40px;
+    height: 100px;
+    width: 100px;
 }
+
+.h3{
+    alignment: left;
+    font-size: 10px;
+}
+
 .post-name{
     float: bottom;
     margin-left: 12px;
@@ -139,6 +144,7 @@ body{
     height: 15px;
     font-size: 8px;
 }
+
 .post-time{
     float: bottom;
     margin-top: 10px;
@@ -147,6 +153,7 @@ body{
     margin-left: 12px;
     color: gray;
 }
+
 .post img{
     cursor: pointer;
     margin-right: 20px;
@@ -159,13 +166,13 @@ body{
     margin-right:20px;
     color: grey;
 }
-.post-time h1{
-    display: inline-block;
 
+.post-time h1{
+    font-size: 15px;
 }
 
 .post-description{
-    float: top;
+    float: left;
     margin-left: 20px;
     width: 440px;
     font-size: 8px;
@@ -215,7 +222,8 @@ body{
     margin-top: 50px;
     width: 250px;
     height: 400px;
-    background-color: white;
+    margin-left: 10%;
+    background-color: #f8f8f8;
 }
 .search-head{
     float:left;
@@ -287,3 +295,229 @@ body{
     margin-right: 30px;
 }
 
+
+
+.menu-element{
+    float:left;
+    margin-left: 6%;
+}
+
+.top-panel-logo{
+    margin-left:5%;
+}
+
+.top-panel-labels{
+    margin-left:30%;
+}
+
+.menu{
+    background: #03A4C2;
+    float:top;
+    width:90%;
+    margin-top:20px;
+    margin-left: 5%;
+    height: 100px;
+}
+
+.recommendations{
+    width: 20%;
+    height:500px;
+    margin-left: 4%;
+    margin-top: 50px;
+    background: #f8f8f8;
+}
+
+.recommendation-pic{
+    width: 150px;
+    height: 200px;
+    margin-top:10px;
+    margin-left:25%;
+}
+
+.menu h1{
+    font-family: "Segoe UI";
+    font-size: 35px;
+    margin-top:30px;
+    color: #f6f6f6;
+}
+
+.top-panel-about h1{
+    font-family: "Segoe UI";
+    font-size: 30px;
+    color: #f6f6f6;
+    float:left;
+    margin-left:50px;
+
+}
+
+.top-panel-contacts h1{
+    font-family: "Segoe UI";
+    font-size: 30px;
+    color: #f6f6f6;
+    float:left;
+    margin-left:550px;
+}
+
+.basket-strip{
+    float:left;
+    margin-left:30px;
+}
+
+.basket-post{
+    width: 700px;
+    height: 190px;
+    background-color: #f8f8f8   ;
+    margin-top:55px;
+}
+
+.basket-post-description{
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+
+    width: 600px;
+    font-size: 8px;
+}
+
+.basket-out-icon{
+    margin-right:80px;
+}
+
+.order-button{
+    margin-top:100px;
+    margin-left:50%;
+}
+
+.basket-result{
+    margin-top: 50px;
+    float:left;
+    margin-left: 5%;
+    width: 300px;
+    min-height:calc(100vh - 50px);
+}
+
+.basket-result h2{
+    font-size: 20px;
+}
+
+.basket-result-block{
+    float:left;
+    margin-top: 50px;
+    width: 350px;
+    height: 400px;
+    margin-left: 20%;
+    background-color: #f8f8f8;
+}
+
+.orders-strip{
+    float:left;
+    width: 850px;
+    min-height:calc(100vh - 81px);}
+
+.orders-post{
+    float:top;
+    height:100px;
+    width:810px;
+    background: #f8f8f8;
+    margin-top:50px;
+    margin-left:10%;
+}
+
+.order-num{
+    float:left;
+    margin-left:5%;
+    font-size:15px;
+
+}
+
+.order-date{
+    float:right;
+    margin-right: 5%;
+}
+
+.order-address{
+    float:left;
+    margin-left:5%;
+}
+
+.order-sum{
+    float:right;
+    margin-right:5%;
+}
+
+.orders-post h2{
+    font-size:20px;
+    color:black;
+}
+
+.fav-out-icon h1{
+    font-size: 20px;
+    float:right;
+    margin-right:30px;
+}
+
+.basket-in-icon{
+    float:right;
+    margin-right:20px;
+}
+
+.fav-strip{
+    float:left;
+    margin-left:15%;
+    width:50%;
+}
+
+.menu-element-authorization{
+    float:left;
+    margin-left:40%;
+}
+
+.login-block{
+    float:left;
+    width:40%;
+    height: 250px;
+    background: #f8f8f8;
+    margin-left:29%;
+    margin-top:40px;
+}
+
+.label-with-input{
+    width:84%;
+    height:20px;
+    margin-top:30px;
+    margin-left:1px;
+}
+
+.input-password{
+    float:right;
+    width:130px;
+    height:20px;
+    margin-right: 100px;
+    margin-top:20px;
+
+
+}
+
+.input-login{
+    float:right;
+    width:130px;
+    height:20px;
+    margin-right: 100px;
+    margin-top:20px;
+}
+
+.label-with-input h1{
+    float:left;
+    font-size: 20px;
+    margin-top:15px;
+    margin-left:210px;
+
+}
+
+.input-login-button{
+    float:left;
+    width:130px;
+    height:20px;
+    margin-left: 310px;
+    margin-top:20px;
+}
