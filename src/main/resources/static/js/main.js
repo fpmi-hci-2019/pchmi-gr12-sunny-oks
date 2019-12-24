@@ -12,14 +12,19 @@ function loadBooks() {
     });
     Promise.all([template, books])
         .then(function(response) {
-            const resolvedData = response[1];
+            let resolvedData = response[1];
             const resolvedTemplate = response[0];
             let strip = document.querySelector('.strip');
             resolvedData.forEach(book => {
+                let str = '';
+                book.authors.forEach(author => str += (' ' + author.name))
+                book.authors = str;
                 strip.innerHTML += mustacheRender(resolvedTemplate, book);
             })
         });
 }
+
+loadBooks();
 /*
 function loadContactsSearch(searchParams) {
     if(!searchParams)

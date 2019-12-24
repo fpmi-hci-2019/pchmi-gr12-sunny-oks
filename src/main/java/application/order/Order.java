@@ -1,15 +1,13 @@
 package application.order;
 import application.enums.Role;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Order {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name = "idOrder")
     private Integer id;
 
     private String name;

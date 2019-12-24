@@ -15,6 +15,7 @@ public class BookController {
     @GetMapping(path = "/all")
     public @ResponseBody
     Iterable<Book> getAllBooks() {
+        Iterable<Book> books = bookRepository.findAll();
         return bookRepository.findAll();
     }
 
