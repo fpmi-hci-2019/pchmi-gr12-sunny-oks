@@ -3,6 +3,15 @@ function mustacheRender(template, data) {
     return Mustache.render(template, data);
 }
 
+Array.prototype.remove = function(value) {
+    var idx = this.indexOf(value);
+    if (idx != -1) {
+        // Второй параметр - число элементов, которые необходимо удалить
+        return this.splice(idx, 1);
+    }
+    return false;
+}
+
 function loadBooks() {
     let template = fetch('./html/book.html').then(function(response) {
         return response.text()
@@ -22,6 +31,7 @@ function loadBooks() {
                 strip.innerHTML += mustacheRender(resolvedTemplate, book);
 
             })
+            initContactPage();
         });
 }
 
@@ -39,17 +49,18 @@ Storage.prototype.getObj = function(key) {
     return JSON.parse(this.getItem(key))
 }
 localStorage.setObj('fav', []);
+localStorage.setObj('basket', []);
 
 function initContactPage() {
     const stars = document.querySelectorAll('.author-pic');
 
     stars.forEach(function (star) {
-        checkbox.addEventListener('click', function () {
-            id = star.getElementsByTagName('p')[0].innerText;
+        star.addEventListener('click', function () {
+            id = +star.getElementsByTagName('p')[0].innerText;
             img = star.getElementsByTagName('img')[0];
-            if(!localStorage.getObj('fav').contains(id)) {
+            if(!localStorage.getObj('fav').includes(id)) {
                 let arr = localStorage.getObj('fav');
-                arr.append(id);
+                arr.push(id);
                 localStorage.setObj('fav', arr);
                 img.src = 'assets/pics/ds.png';
             }
@@ -64,13 +75,13 @@ function initContactPage() {
 
     const basket = document.querySelectorAll('.basket-in-icon');
 
-    stars.forEach(function (star) {
+    basket.forEach(function (star) {
         star.addEventListener('click', function () {
-            id = star.getElementsByTagName('p')[0].innerText;
+            id = +star.getElementsByTagName('p')[0].innerText;
             img = star.getElementsByTagName('img')[0];
-            if(!localStorage.getObj('basket').contains(id)) {
+            if(!localStorage.getObj('basket').includes(id)) {
                 let arr = localStorage.getObj('basket');
-                arr.append(id);
+                arr.push(id);
                 localStorage.setObj('basket', arr);
                 img.src = 'assets/pics/basket-out.png';
             }
@@ -84,7 +95,6 @@ function initContactPage() {
     });
 
 }
-
 /*
 function loadContactsSearch(searchParams) {
     if(!searchParams)
