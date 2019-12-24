@@ -1,7 +1,6 @@
 package application.book;
 
 import application.author.Author;
-import application.enums.Genre;
 
 import javax.persistence.*;
 import java.util.LinkedList;
@@ -19,7 +18,7 @@ public class Book {
 
     private String description;
 
-    private Genre genre;
+    private String genre;
 
     private Double cost;
 
@@ -59,11 +58,11 @@ public class Book {
         this.description = description;
     }
 
-    public Genre getGenre() {
+    public String getGenre() {
         return genre;
     }
 
-    public void setGenre(Genre genre) {
+    public void setGenre(String genre) {
         this.genre = genre;
     }
 

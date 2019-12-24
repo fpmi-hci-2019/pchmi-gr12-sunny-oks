@@ -20,6 +20,7 @@ function loadBooks() {
                 book.authors.forEach(author => str += (' ' + author.name))
                 book.authors = str;
                 strip.innerHTML += mustacheRender(resolvedTemplate, book);
+
             })
         });
 }
@@ -30,6 +31,59 @@ function openBook(id) {
 }
 
 loadBooks();
+
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+localStorage.setObj('fav', []);
+
+function initContactPage() {
+    const stars = document.querySelectorAll('.author-pic');
+
+    stars.forEach(function (star) {
+        checkbox.addEventListener('click', function () {
+            id = star.getElementsByTagName('p')[0].innerText;
+            img = star.getElementsByTagName('img')[0];
+            if(!localStorage.getObj('fav').contains(id)) {
+                let arr = localStorage.getObj('fav');
+                arr.append(id);
+                localStorage.setObj('fav', arr);
+                img.src = 'assets/pics/ds.png';
+            }
+            else {
+                let arr = localStorage.getObj('fav');
+                arr.remove(id);
+                localStorage.setObj('fav', arr);
+                img.src = 'assets/pics/star_unselected.png';
+            }
+        })
+    });
+
+    const basket = document.querySelectorAll('.basket-in-icon');
+
+    stars.forEach(function (star) {
+        star.addEventListener('click', function () {
+            id = star.getElementsByTagName('p')[0].innerText;
+            img = star.getElementsByTagName('img')[0];
+            if(!localStorage.getObj('basket').contains(id)) {
+                let arr = localStorage.getObj('basket');
+                arr.append(id);
+                localStorage.setObj('basket', arr);
+                img.src = 'assets/pics/basket-out.png';
+            }
+            else {
+                let arr = localStorage.getObj('basket');
+                arr.remove(id);
+                localStorage.setObj('basket', arr);
+                img.src = 'assets/pics/korzina.png';
+            }
+        })
+    });
+
+}
 
 /*
 function loadContactsSearch(searchParams) {

@@ -1,5 +1,4 @@
 package application.order;
-import application.enums.Role;
 
 import javax.persistence.*;
 
@@ -14,7 +13,7 @@ public class Order {
 
     private String email;
 
-    private Role role;
+    private String role;
 
     public Integer getId() {
         return id;
@@ -40,11 +39,11 @@ public class Order {
         this.email = email;
     }
 
-    public Role getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
