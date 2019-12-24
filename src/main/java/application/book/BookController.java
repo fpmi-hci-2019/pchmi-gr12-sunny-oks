@@ -1,10 +1,7 @@
 package application.book;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "/book")
@@ -17,6 +14,11 @@ public class BookController {
     Iterable<Book> getAllBooks() {
         Iterable<Book> books = bookRepository.findAll();
         return bookRepository.findAll();
+    }
+
+    @GetMapping("{id}")
+    public Book getBook(@PathVariable int id) {
+        return bookRepository.findById(id).get();
     }
 
 }

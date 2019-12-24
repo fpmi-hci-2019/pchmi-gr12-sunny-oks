@@ -24,7 +24,13 @@ function loadBooks() {
         });
 }
 
+function openBook(id) {
+    localStorage.setItem('bookId', id);
+    document.location.href = "./book.html";
+}
+
 loadBooks();
+
 /*
 function loadContactsSearch(searchParams) {
     if(!searchParams)
