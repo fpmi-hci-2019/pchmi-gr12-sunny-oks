@@ -105,13 +105,13 @@ function initContactPage() {
                 let arr = localStorage.getObj('basket');
                 arr.push(id);
                 localStorage.setObj('basket', arr);
-                img.src = 'assets/pics/korzina.png';
+                img.src = 'assets/pics/basket-out.png';
             }
             else {
                 let arr = localStorage.getObj('basket');
                 arr.remove(id);
                 localStorage.setObj('basket', arr);
-                img.src = 'assets/pics/basket-out.png';
+                img.src = 'assets/pics/korzina.png';
             }
         })
     });

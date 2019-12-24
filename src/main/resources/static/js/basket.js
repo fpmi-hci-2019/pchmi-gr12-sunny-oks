@@ -39,7 +39,7 @@ function loadBooks() {
                     book.authors = str;
                     strip.innerHTML += mustacheRender(resolvedTemplate, book);
                 }
-            })
+            });
             initContactPage()
         });
 }
@@ -48,13 +48,23 @@ loadBooks();
 
 function initContactPage() {
     const basket = document.querySelectorAll('.basket-out-icon');
-
+    let sum = 0;
     basket.forEach(function (star) {
+        sum += +document.querySelector('.author-pic > h1').innerText;
         star.addEventListener('click', function () {
             star.parentNode.remove();
             let arr = localStorage.getObj('basket');
             id = +star.getElementsByTagName('p')[0].innerText;
             arr.remove(id);
             localStorage.setObj('basket', arr);
-    })});
+            initContactPage();
+        })
+
+    });
+    document.querySelector('.sum').innerText = sum;
+
+    document.querySelector('#make_order').addEventListener('click', function () {
+        localStorage.setObj('basket', []);
+        document.location.href = "./index.html";
+    })
 }
