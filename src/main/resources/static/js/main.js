@@ -12,6 +12,21 @@ Array.prototype.remove = function(value) {
     return false;
 }
 
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+
+if(!localStorage.getObj('fav')) {
+    localStorage.setObj('fav', []);
+}
+if(!localStorage.getObj('basket')) {
+    localStorage.setObj('basket', []);
+}
+
+
 function loadBooks() {
     let template = fetch('./html/book.html').then(function(response) {
         return response.text()
@@ -42,19 +57,18 @@ function openBook(id) {
 
 loadBooks();
 
-Storage.prototype.setObj = function(key, obj) {
-    return this.setItem(key, JSON.stringify(obj))
-}
-Storage.prototype.getObj = function(key) {
-    return JSON.parse(this.getItem(key))
-}
-localStorage.setObj('fav', []);
-localStorage.setObj('basket', []);
-
 function initContactPage() {
-    const stars = document.querySelectorAll('.author-pic');
+    const stars = document.querySelectorAll('.star');
 
     stars.forEach(function (star) {
+        let id = +star.getElementsByTagName('p')[0].innerText;
+        let img = star.getElementsByTagName('img')[0];
+        if(!localStorage.getObj('fav').includes(id)) {
+            img.src = 'assets/pics/star_unselected.png';
+        }
+        else {
+            img.src = 'assets/pics/star.png';
+        }
         star.addEventListener('click', function () {
             id = +star.getElementsByTagName('p')[0].innerText;
             img = star.getElementsByTagName('img')[0];
@@ -62,7 +76,7 @@ function initContactPage() {
                 let arr = localStorage.getObj('fav');
                 arr.push(id);
                 localStorage.setObj('fav', arr);
-                img.src = 'assets/pics/ds.png';
+                img.src = 'assets/pics/star.png';
             }
             else {
                 let arr = localStorage.getObj('fav');
@@ -76,6 +90,14 @@ function initContactPage() {
     const basket = document.querySelectorAll('.basket-in-icon');
 
     basket.forEach(function (star) {
+        id = +star.getElementsByTagName('p')[0].innerText;
+        img = star.getElementsByTagName('img')[0];
+        if(!localStorage.getObj('basket').includes(id)) {
+            img.src = 'assets/pics/korzina.png';
+        }
+        else {
+            img.src = 'assets/pics/basket-out.png';
+        }
         star.addEventListener('click', function () {
             id = +star.getElementsByTagName('p')[0].innerText;
             img = star.getElementsByTagName('img')[0];
@@ -83,13 +105,13 @@ function initContactPage() {
                 let arr = localStorage.getObj('basket');
                 arr.push(id);
                 localStorage.setObj('basket', arr);
-                img.src = 'assets/pics/basket-out.png';
+                img.src = 'assets/pics/korzina.png';
             }
             else {
                 let arr = localStorage.getObj('basket');
                 arr.remove(id);
                 localStorage.setObj('basket', arr);
-                img.src = 'assets/pics/korzina.png';
+                img.src = 'assets/pics/basket-out.png';
             }
         })
     });
