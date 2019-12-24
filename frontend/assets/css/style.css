@@ -521,3 +521,64 @@ body{
     margin-left: 310px;
     margin-top:20px;
 }
+
+.profile-block{
+    float:left;
+    width:1000px;
+    height: 500px;
+    background: #f8f8f8;
+    margin-left:21%;
+    margin-top:40px;
+}
+
+.profile-name{
+    height:30px;
+    width:400px;
+    float: top;
+    margin-left:5%;
+    margin-top:25px;
+}
+
+.profile-ava{
+    height:300px;
+    width:300px;
+    float: left;
+    margin-left:5%;
+    margin-top:50px;
+}
+
+
+.profile-name h1{
+    font-size:25px;
+}
+
+.profile-info-block{
+    float: left;
+    width:500px;
+    height:300px;
+    margin-top:25px;
+    margin-left:25px;
+}
+
+
+.profile-info-block h1{
+    font-size: 25px;
+}
+
+
+.name-input{
+    float:top;
+}
+
+.book-ava{
+    height:300px;
+    width:300px;
+    float: left;
+    margin-left:5%;
+    margin-top:25px;
+}
+
+.basket-book-page{
+    float: left;
+    margin-left: 70px;
+}
